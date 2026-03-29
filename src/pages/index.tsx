@@ -9,7 +9,7 @@ function HeroBadge() {
   return (
     <div className={styles.heroBadge}>
       <span className={styles.heroBadgeDot} />
-      Available on iPhone &amp; iPad
+      Coming Soon
     </div>
   );
 }

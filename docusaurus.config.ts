@@ -11,12 +11,11 @@ const config: Config = {
     v4: true,
   },
 
-  // If you add a custom domain (CNAME), change url to your domain and baseUrl to '/'.
   url: 'https://serverly-app.github.io',
-  baseUrl: '/serverly.github.io/',
+  baseUrl: '/',
 
   organizationName: 'serverly-app',
-  projectName: 'serverly.github.io',
+  projectName: 'serverly-app.github.io',
 
   onBrokenLinks: 'throw',
   onBrokenAnchors: 'ignore',
