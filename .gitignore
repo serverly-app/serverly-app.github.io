@@ -1,0 +1,16 @@
+# Dependencies
+node_modules/
+
+# Build output
+build/
+.docusaurus/
+
+# Local env
+.env
+.env.local
+
+# macOS
+.DS_Store
+
+# LLM context — kept local, not committed
+PROGRESS.md
