@@ -1,27 +1,17 @@
 /* ===== HERO ===== */
 .hero {
   background: linear-gradient(150deg, #007aff 0%, #5856d6 60%, #34aadc 100%);
-  padding: 5rem 0 4rem;
+  padding: 4rem 0 3rem;
   overflow: hidden;
-}
-
-.hero .container {
-  display: flex;
-  align-items: center;
-  gap: 3rem;
-}
-
-.heroInner {
-  flex: 1;
-  min-width: 0;
+  text-align: center;
 }
 
 .heroBadge {
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
-  background: rgba(255, 255, 255, 0.18);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.28);
   color: rgba(255, 255, 255, 0.95);
   border-radius: 100px;
   padding: 0.3rem 0.85rem;
@@ -42,7 +32,7 @@
 
 @keyframes pulse {
   0%, 100% { opacity: 1; }
-  50% { opacity: 0.5; }
+  50% { opacity: 0.45; }
 }
 
 .heroTitle {
@@ -51,22 +41,24 @@
   letter-spacing: -0.025em;
   color: #ffffff;
   line-height: 1.15;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.1rem;
 }
 
 .heroSubtitle {
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   color: rgba(255, 255, 255, 0.82);
   line-height: 1.6;
-  max-width: 480px;
-  margin-bottom: 2.25rem;
+  max-width: 520px;
+  margin: 0 auto 2rem;
 }
 
 .heroCtas {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  justify-content: center;
+  gap: 1.25rem;
   flex-wrap: wrap;
+  margin-bottom: 3rem;
 }
 
 .appStoreBadge {
@@ -80,31 +72,11 @@
   text-decoration: none;
   transition: opacity 0.15s ease, transform 0.15s ease;
 }
+.appStoreBadge:hover { opacity: 0.85; color: #ffffff; text-decoration: none; transform: scale(0.97); }
 
-.appStoreBadge:hover {
-  opacity: 0.85;
-  color: #ffffff;
-  text-decoration: none;
-  transform: scale(0.97);
-}
-
-.appStoreBadgeText {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.25;
-}
-
-.appStoreSub {
-  font-size: 0.62rem;
-  opacity: 0.8;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
-.appStoreMain {
-  font-size: 1rem;
-  font-weight: 700;
-}
+.appStoreBadgeText { display: flex; flex-direction: column; line-height: 1.25; }
+.appStoreSub { font-size: 0.62rem; opacity: 0.8; text-transform: uppercase; letter-spacing: 0.05em; }
+.appStoreMain { font-size: 1rem; font-weight: 700; }
 
 .learnMoreBtn {
   color: rgba(255, 255, 255, 0.9);
@@ -115,85 +87,204 @@
   padding-bottom: 1px;
   transition: color 0.15s, border-color 0.15s;
 }
+.learnMoreBtn:hover { color: #fff; border-color: rgba(255,255,255,0.9); text-decoration: none; }
 
-.learnMoreBtn:hover {
-  color: #ffffff;
-  border-color: rgba(255, 255, 255, 0.8);
-  text-decoration: none;
-}
-
-/* ===== PHONE MOCKUP ===== */
-.heroVisual {
-  flex: 0 0 auto;
+/* ===== HERO SCENE ===== */
+.heroScene {
   display: flex;
+  align-items: center;
   justify-content: center;
+  gap: 0;
+  margin: 0 auto;
+  max-width: 960px;
+  min-height: 360px;
 }
 
-.phoneFrame {
-  width: 220px;
-  height: 440px;
+/* ===== IPAD MOCKUP ===== */
+.ipadFrame {
+  width: 240px;
+  flex-shrink: 0;
   background: #1c1c1e;
-  border-radius: 44px;
-  padding: 12px;
+  border-radius: 22px;
+  padding: 8px;
   box-shadow:
-    0 0 0 2px rgba(255,255,255,0.08),
-    0 30px 80px rgba(0,0,0,0.45),
-    inset 0 0 0 1px rgba(255,255,255,0.05);
+    0 0 0 1.5px rgba(255,255,255,0.08),
+    0 28px 60px rgba(0,0,0,0.5),
+    inset 0 0 0 1px rgba(255,255,255,0.04);
   position: relative;
 }
 
-.phoneScreen {
-  background: #000000;
-  border-radius: 34px;
-  height: 100%;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
+.ipadSideBtn {
+  position: absolute;
+  right: -3px;
+  top: 60px;
+  width: 3px;
+  height: 28px;
+  background: #3a3a3c;
+  border-radius: 0 2px 2px 0;
 }
 
-.phoneStatusBar {
-  height: 40px;
-  background: #1c1c1e;
-  border-radius: 34px 34px 0 0;
-  flex-shrink: 0;
-}
-
-.phoneContent {
-  flex: 1;
+.ipadScreen {
   background: #f2f2f7;
-  padding: 12px;
+  border-radius: 15px;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  overflow: hidden;
 }
 
-.serverCard {
+.ipadStatusBar {
   background: #ffffff;
-  border-radius: 12px;
-  padding: 12px;
+  padding: 6px 10px 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(60,60,67,0.12);
+}
+
+.ipadTime {
+  font-size: 0.6rem;
+  font-weight: 600;
+  color: #1c1c1e;
+  font-family: -apple-system, sans-serif;
+}
+
+.ipadStatusIcons {
   display: flex;
   align-items: center;
-  gap: 8px;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  gap: 4px;
 }
 
-.serverCardDot {
+.ipadSignal, .ipadWifi {
+  display: block;
   width: 10px;
-  height: 10px;
-  border-radius: 50%;
+  height: 7px;
+  background: #1c1c1e;
+  border-radius: 1px;
+  opacity: 0.8;
+}
+
+.ipadWifi {
+  width: 8px;
+  height: 6px;
+  border-radius: 50% 50% 0 0;
+  background: none;
+  border: 1.5px solid #1c1c1e;
+  clip-path: polygon(0 60%, 100% 60%, 100% 100%, 0 100%);
+}
+
+.ipadBattery {
+  display: block;
+  width: 14px;
+  height: 7px;
+  border: 1.5px solid #1c1c1e;
+  border-radius: 2px;
+  position: relative;
+  opacity: 0.8;
+}
+.ipadBattery::after {
+  content: '';
+  position: absolute;
+  right: -4px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2px;
+  height: 4px;
+  background: #1c1c1e;
+  border-radius: 0 1px 1px 0;
+}
+.ipadBattery::before {
+  content: '';
+  position: absolute;
+  left: 1px;
+  top: 1px;
+  bottom: 1px;
+  width: 65%;
   background: #34c759;
-  box-shadow: 0 0 5px #34c759;
+  border-radius: 1px;
+}
+
+.ipadNavBar {
+  background: #ffffff;
+  padding: 8px 12px 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(60,60,67,0.1);
+}
+
+.ipadNavTitle {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #1c1c1e;
+  letter-spacing: -0.01em;
+}
+
+.ipadNavAdd {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #007aff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.ipadBody {
+  flex: 1;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ipadSection {
+  background: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.ipadSectionLabel {
+  font-size: 0.55rem;
+  font-weight: 600;
+  color: #8e8e93;
+  letter-spacing: 0.08em;
+  padding: 5px 10px 3px;
+  border-bottom: 1px solid rgba(60,60,67,0.1);
+}
+
+.ipadRow {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 10px;
+  border-bottom: 1px solid rgba(60,60,67,0.06);
+}
+.ipadRow:last-child { border-bottom: none; }
+
+.ipadRowDot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
   flex-shrink: 0;
 }
 
-.serverCardInfo {
-  flex: 1;
-  min-width: 0;
+.ipadRowIcon {
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.55rem;
+  font-weight: 700;
+  flex-shrink: 0;
 }
 
-.serverCardName {
-  font-size: 0.72rem;
+.ipadRowInfo { flex: 1; min-width: 0; }
+
+.ipadRowName {
+  font-size: 0.65rem;
   font-weight: 600;
   color: #1c1c1e;
   white-space: nowrap;
@@ -201,47 +292,367 @@
   text-overflow: ellipsis;
 }
 
-.serverCardMeta {
-  font-size: 0.62rem;
+.ipadRowMeta {
+  font-size: 0.55rem;
   color: #8e8e93;
   margin-top: 1px;
 }
 
-.serverCardStatus {
-  font-size: 0.62rem;
+.ipadRowBadge {
+  font-size: 0.55rem;
   font-weight: 600;
-  color: #34c759;
-  background: rgba(52, 199, 89, 0.12);
-  border-radius: 6px;
-  padding: 2px 6px;
+  border-radius: 5px;
+  padding: 2px 5px;
+  flex-shrink: 0;
 }
 
-.codeSnippet {
-  background: #1c1c1e;
-  border-radius: 10px;
-  padding: 10px;
+.ipadConnCount {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: rgba(0,122,255,0.08);
+  border-radius: 8px;
+  padding: 5px 10px;
+}
+
+.ipadConnDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #007aff;
+  animation: pulse 2s infinite;
+}
+
+.ipadConnCount span {
   font-size: 0.6rem;
-  font-family: 'SF Mono', 'Menlo', monospace;
-  line-height: 1.7;
-  white-space: pre;
+  color: #007aff;
+  font-weight: 500;
+}
+
+.ipadHomeBar {
+  height: 4px;
+  margin: 5px auto 1px;
+  width: 60px;
+  background: rgba(255,255,255,0.25);
+  border-radius: 2px;
+}
+
+/* ===== CONNECTOR ARROWS ===== */
+.sceneConnectors {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+  padding: 0 4px;
+  flex-shrink: 0;
+  height: 200px;
+}
+
+.arrowWrap {
+  display: flex;
+  align-items: center;
+  width: 40px;
+}
+
+.arrowLine {
+  flex: 1;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(255,255,255,0.5), rgba(255,255,255,0.8));
+  border-radius: 1px;
+  animation: flowRight 1.5s linear infinite;
+  background-size: 200% 100%;
+}
+
+@keyframes flowRight {
+  0% { background-position: 100% 0; }
+  100% { background-position: -100% 0; }
+}
+
+.arrowHead {
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 7px solid rgba(255,255,255,0.8);
+  flex-shrink: 0;
+}
+
+/* ===== SQL PANEL ===== */
+.sqlPanel {
+  width: 200px;
+  flex-shrink: 0;
+  background: #1c1c1e;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 16px 48px rgba(0,0,0,0.4), 0 0 0 1px rgba(255,255,255,0.06);
+}
+
+.sqlPanelHeader {
+  background: #2c2c2e;
+  padding: 7px 10px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.sqlPanelDots {
+  display: flex;
+  gap: 4px;
+}
+.sqlPanelDots span {
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.sqlPanelTitle {
+  font-size: 0.58rem;
+  color: #8e8e93;
+  font-family: 'SF Mono', Menlo, monospace;
+  margin-left: 2px;
+}
+
+.sqlPanelBody {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.sqlOp {
+  font-size: 0.6rem;
+  font-family: 'SF Mono', Menlo, monospace;
+  line-height: 1.6;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px;
+}
+
+.sqlPrompt { color: #636366; }
+.sqlKw { color: #ff9f0a; }
+.sqlTx { color: #ebebf5; }
+
+.sqlResult {
+  font-size: 0.57rem;
+  font-family: 'SF Mono', Menlo, monospace;
+  color: #30d158;
+  padding-left: 10px;
+  margin-bottom: 4px;
+}
+
+/* ===== CLIENT WINDOWS ===== */
+.clientsStack {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.clientWindow {
+  width: 210px;
+  background: #1c1c1e;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 12px 36px rgba(0,0,0,0.4), 0 0 0 1px rgba(255,255,255,0.06);
+}
+
+.clientWindowBar {
+  background: #2c2c2e;
+  padding: 6px 10px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.clientWindowDots { display: flex; gap: 4px; }
+.clientWindowDots span { display: block; width: 8px; height: 8px; border-radius: 50%; }
+
+.clientWindowTitle {
+  font-size: 0.58rem;
+  color: #8e8e93;
+  font-family: -apple-system, sans-serif;
+  margin-left: 2px;
+}
+
+.clientWindowBody {
+  padding: 8px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.clientLine {
+  font-size: 0.58rem;
+  font-family: 'SF Mono', Menlo, monospace;
+  line-height: 1.5;
+}
+
+.cliDim { color: #636366; }
+.cliGreen { color: #30d158; }
+.cliBlue { color: #64d2ff; }
+.cliOrange { color: #ff9f0a; }
+.cliWhite { color: #ebebf5; }
+
+.clientResultTable {
+  background: #2c2c2e;
+  border-radius: 6px;
+  overflow: hidden;
+  margin: 3px 0;
+}
+
+.clientThead {
+  display: grid;
+  grid-template-columns: 24px 1fr 1fr;
+  gap: 4px;
+  padding: 3px 6px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.clientThead span {
+  font-size: 0.52rem;
+  font-family: 'SF Mono', Menlo, monospace;
+  color: #8e8e93;
+  font-weight: 600;
+}
+
+.clientTrow {
+  display: grid;
+  grid-template-columns: 24px 1fr 1fr;
+  gap: 4px;
+  padding: 3px 6px;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+.clientTrow:last-child { border-bottom: none; }
+.clientTrow span {
+  font-size: 0.52rem;
+  font-family: 'SF Mono', Menlo, monospace;
   color: #ebebf5;
 }
 
-.codeComment { color: #98989d; }
-.codeCmd { color: #30d158; }
-.codeArg { color: #64d2ff; }
-.codePrompt { color: #98989d; }
-.codeKeyword { color: #ff9f0a; }
-.codeText { color: #ebebf5; }
+/* ===== GUI CLIENT ===== */
+.guiWindowBody {
+  display: flex;
+  height: 130px;
+}
+
+.guiSidebar {
+  width: 68px;
+  background: #2c2c2e;
+  border-right: 1px solid rgba(255,255,255,0.06);
+  padding: 6px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  flex-shrink: 0;
+}
+
+.guiConn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 8px;
+  font-size: 0.55rem;
+  color: #8e8e93;
+  font-family: -apple-system, sans-serif;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.guiConnActive {
+  background: rgba(0,122,255,0.15);
+  color: #ebebf5;
+}
+
+.guiConnDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #34c759;
+  flex-shrink: 0;
+}
+
+.guiTable {
+  padding: 3px 8px 3px 18px;
+  font-size: 0.52rem;
+  color: #636366;
+  font-family: -apple-system, sans-serif;
+}
+
+.guiMain {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.guiToolbar {
+  background: #2c2c2e;
+  padding: 5px 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.guiBtn {
+  font-size: 0.52rem;
+  background: #007aff;
+  color: #fff;
+  border-radius: 4px;
+  padding: 2px 5px;
+  font-family: -apple-system, sans-serif;
+  white-space: nowrap;
+}
+
+.guiQuery {
+  font-size: 0.52rem;
+  font-family: 'SF Mono', Menlo, monospace;
+  color: #ebebf5;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.guiGrid {
+  flex: 1;
+  overflow: hidden;
+}
+
+.guiGridHead {
+  display: grid;
+  grid-template-columns: 28px 32px 38px 1fr;
+  gap: 4px;
+  padding: 4px 8px;
+  background: #2c2c2e;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.guiGridHead span {
+  font-size: 0.5rem;
+  font-family: 'SF Mono', Menlo, monospace;
+  color: #8e8e93;
+  font-weight: 600;
+}
+
+.guiGridRow {
+  display: grid;
+  grid-template-columns: 28px 32px 38px 1fr;
+  gap: 4px;
+  padding: 4px 8px;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+.guiGridRow span {
+  font-size: 0.5rem;
+  font-family: 'SF Mono', Menlo, monospace;
+  color: #ebebf5;
+}
+.guiGreen { color: #30d158 !important; }
+.guiOrange { color: #ff9f0a !important; }
 
 /* ===== SECTIONS ===== */
-.section {
-  padding: 5rem 0;
-}
-
-.sectionAlt {
-  background: var(--ios-bg-secondary);
-}
+.section { padding: 5rem 0; }
+.sectionAlt { background: var(--ios-bg-secondary); }
 
 .sectionTitle {
   font-size: 2.1rem;
@@ -274,40 +685,13 @@
   box-shadow: 0 2px 8px rgba(0,0,0,0.06), 0 0 1px rgba(0,0,0,0.04);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
+[data-theme='dark'] .featureCard { box-shadow: 0 2px 8px rgba(0,0,0,0.3); }
+.featureCard:hover { transform: translateY(-3px); box-shadow: 0 8px 28px rgba(0,0,0,0.1); }
+[data-theme='dark'] .featureCard:hover { box-shadow: 0 8px 28px rgba(0,0,0,0.4); }
 
-[data-theme='dark'] .featureCard {
-  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-}
-
-.featureCard:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 28px rgba(0,0,0,0.1);
-}
-
-[data-theme='dark'] .featureCard:hover {
-  box-shadow: 0 8px 28px rgba(0,0,0,0.4);
-}
-
-.featureIcon {
-  font-size: 2rem;
-  display: block;
-  margin-bottom: 0.85rem;
-  line-height: 1;
-}
-
-.featureTitle {
-  font-size: 1rem;
-  font-weight: 600;
-  margin-bottom: 0.4rem;
-  color: var(--ios-label-primary);
-}
-
-.featureDesc {
-  font-size: 0.9rem;
-  color: var(--ios-label-secondary);
-  line-height: 1.55;
-  margin: 0;
-}
+.featureIcon { font-size: 2rem; display: block; margin-bottom: 0.85rem; line-height: 1; }
+.featureTitle { font-size: 1rem; font-weight: 600; margin-bottom: 0.4rem; color: var(--ios-label-primary); }
+.featureDesc { font-size: 0.9rem; color: var(--ios-label-secondary); line-height: 1.55; margin: 0; }
 
 /* ===== HOW IT WORKS ===== */
 .stepsGrid {
@@ -326,10 +710,7 @@
   padding: 1.35rem;
   box-shadow: 0 2px 8px rgba(0,0,0,0.06);
 }
-
-[data-theme='dark'] .stepCard {
-  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-}
+[data-theme='dark'] .stepCard { box-shadow: 0 2px 8px rgba(0,0,0,0.3); }
 
 .stepNumber {
   width: 34px;
@@ -345,19 +726,8 @@
   flex-shrink: 0;
 }
 
-.stepContent h3 {
-  font-size: 0.95rem;
-  font-weight: 600;
-  margin: 0 0 0.3rem;
-  color: var(--ios-label-primary);
-}
-
-.stepContent p {
-  font-size: 0.875rem;
-  color: var(--ios-label-secondary);
-  margin: 0;
-  line-height: 1.5;
-}
+.stepContent h3 { font-size: 0.95rem; font-weight: 600; margin: 0 0 0.3rem; color: var(--ios-label-primary); }
+.stepContent p { font-size: 0.875rem; color: var(--ios-label-secondary); margin: 0; line-height: 1.5; }
 
 /* ===== CODE BLOCK ===== */
 .codeBlock {
@@ -377,18 +747,8 @@
   border-bottom: 1px solid rgba(255,255,255,0.06);
 }
 
-.codeBlockDot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-}
-
-.codeBlockTitle {
-  font-size: 0.75rem;
-  color: #8e8e93;
-  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-  margin-left: 4px;
-}
+.codeBlockDot { width: 12px; height: 12px; border-radius: 50%; }
+.codeBlockTitle { font-size: 0.75rem; color: #8e8e93; font-family: -apple-system, sans-serif; margin-left: 4px; }
 
 .codeBlockPre {
   margin: 0;
@@ -402,38 +762,12 @@
   overflow-x: auto;
 }
 
-/* ===== CTA SECTION ===== */
-.ctaSection {
-  background: linear-gradient(150deg, #007aff 0%, #5856d6 100%);
-}
-
-.ctaInner {
-  text-align: center;
-}
-
-.ctaTitle {
-  font-size: 2.1rem;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  color: #ffffff;
-  margin-bottom: 0.75rem;
-}
-
-.ctaSubtitle {
-  font-size: 1.05rem;
-  color: rgba(255, 255, 255, 0.82);
-  max-width: 460px;
-  margin: 0 auto 2rem;
-  line-height: 1.6;
-}
-
-.ctaCtas {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1.25rem;
-  flex-wrap: wrap;
-}
+/* ===== CTA ===== */
+.ctaSection { background: linear-gradient(150deg, #007aff 0%, #5856d6 100%); }
+.ctaInner { text-align: center; }
+.ctaTitle { font-size: 2.1rem; font-weight: 700; letter-spacing: -0.02em; color: #ffffff; margin-bottom: 0.75rem; }
+.ctaSubtitle { font-size: 1.05rem; color: rgba(255,255,255,0.82); max-width: 460px; margin: 0 auto 2rem; line-height: 1.6; }
+.ctaCtas { display: flex; align-items: center; justify-content: center; gap: 1.25rem; flex-wrap: wrap; }
 
 .appStoreBadgeLight {
   display: inline-flex;
@@ -446,81 +780,41 @@
   text-decoration: none;
   transition: opacity 0.15s ease, transform 0.15s ease;
 }
-
-.appStoreBadgeLight:hover {
-  opacity: 0.88;
-  color: #000000;
-  text-decoration: none;
-  transform: scale(0.97);
-}
+.appStoreBadgeLight:hover { opacity: 0.88; color: #000000; text-decoration: none; transform: scale(0.97); }
 
 .docsBtn {
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255,255,255,0.9);
   font-weight: 500;
   font-size: 1rem;
   text-decoration: none;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  border-bottom: 1px solid rgba(255,255,255,0.4);
   padding-bottom: 1px;
   transition: color 0.15s, border-color 0.15s;
 }
-
-.docsBtn:hover {
-  color: #ffffff;
-  border-color: rgba(255, 255, 255, 0.9);
-  text-decoration: none;
-}
+.docsBtn:hover { color: #fff; border-color: rgba(255,255,255,0.9); text-decoration: none; }
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 996px) {
-  .hero .container {
+  .heroScene {
     flex-direction: column;
-    text-align: center;
+    gap: 16px;
+    align-items: center;
   }
-
-  .heroSubtitle {
-    max-width: 100%;
-    margin-left: auto;
-    margin-right: auto;
+  .sceneConnectors {
+    flex-direction: row;
+    height: auto;
+    gap: 20px;
   }
-
-  .heroCtas {
-    justify-content: center;
-  }
-
-  .heroVisual {
-    order: -1;
-  }
-
-  .phoneFrame {
-    width: 180px;
-    height: 360px;
-    border-radius: 36px;
-  }
-
-  .phoneScreen {
-    border-radius: 28px;
-  }
-
-  .phoneStatusBar {
-    height: 32px;
-    border-radius: 28px 28px 0 0;
-  }
-
-  .featureGrid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  .arrowWrap { transform: rotate(90deg); }
+  .clientsStack { flex-direction: row; flex-wrap: wrap; justify-content: center; }
+  .featureGrid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 640px) {
-  .heroTitle {
-    font-size: 2.25rem;
-  }
-
-  .featureGrid {
-    grid-template-columns: 1fr;
-  }
-
-  .stepsGrid {
-    grid-template-columns: 1fr;
-  }
+  .heroTitle { font-size: 2.25rem; }
+  .featureGrid { grid-template-columns: 1fr; }
+  .stepsGrid { grid-template-columns: 1fr; }
+  .ipadFrame { width: 200px; }
+  .sqlPanel { width: 170px; }
+  .clientWindow { width: 170px; }
 }

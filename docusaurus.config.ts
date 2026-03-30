@@ -5,7 +5,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 const config: Config = {
   title: 'Serverly',
   tagline: 'A full SQL server. In your pocket.',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/favicon.png',
 
   future: {
     v4: true,
@@ -49,7 +49,8 @@ const config: Config = {
       title: 'Serverly',
       logo: {
         alt: 'Serverly App Icon',
-        src: 'img/logo.svg',
+        src: 'img/logo.png',
+        style: {borderRadius: '8px'},
       },
       items: [
         {
